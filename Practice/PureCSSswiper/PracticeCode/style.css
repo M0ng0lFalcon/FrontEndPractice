@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+img {
+    height: 60rem;
+    width: 10rem;
+    background: #fcfc;
+    margin: 1rem;
+    border-radius: 20rem;
+    -webkit-border-radius: 20rem;
+    -moz-border-radius: 20rem;
+    -ms-border-radius: 20rem;
+    -o-border-radius: 20rem;
+    object-fit: cover;
+
+    /* css variable */
+    --expand-width: 60rem;
+    --expand-radius: 2rem;
+    --shrink-width: 10rem;
+    --shrink-radius: 20rem;
+}
+
+img:nth-child(1) {
+    animation: swiper 10s infinite;
+    -webkit-animation: swiper 10s infinite;
+}
+
+img:nth-child(2) {
+    animation: swiper 10s 2s infinite;
+    -webkit-animation: swiper 10s 2s infinite;
+}
+
+img:nth-child(3) {
+    animation: swiper 10s 4s infinite;
+    -webkit-animation: swiper 10s 4s infinite;
+}
+
+img:nth-child(4) {
+    animation: swiper 10s 6s infinite;
+    -webkit-animation: swiper 10s 6s infinite;
+}
+
+img:nth-child(5) {
+    animation: swiper 10s 8s infinite;
+    -webkit-animation: swiper 10s 8s infinite;
+}
+
+
+@keyframes swiper {
+
+    0%,
+    26%,
+    100% {
+        width: var(--shrink-width);
+        border-radius: var(--shrink-radius);
+        -webkit-border-radius: var(--shrink-radius);
+        -moz-border-radius: var(--shrink-radius);
+        -ms-border-radius: var(--shrink-radius);
+        -o-border-radius: var(--shrink-radius);
+    }
+
+    6%,
+    20% {
+        width: var(--expand-width);
+        border-radius: var(--expand-radius);
+        -webkit-border-radius: var(--expand-radius);
+        -moz-border-radius: var(--expand-radius);
+        -ms-border-radius: var(--expand-radius);
+        -o-border-radius: var(--expand-radius);
+    }
+
+}
